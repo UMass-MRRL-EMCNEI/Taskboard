@@ -13,6 +13,7 @@ import kit from "./assets/kit_square.png";
 import Gallery from "./components/Gallery.astro";
 import Carousel from "./components/Carousel.astro";
 import CarouselSlide from "./components/CarouselSlide.astro";
+import bhg from "./assets/bhg.jpg";
 import img04014F7A from "./assets/SmallFigures/04014F7A.jpg";
 import img06EFD4E5 from "./assets/SmallFigures/06EFD4E5.jpg";
 import img0A34F1DE from "./assets/SmallFigures/0A34F1DE.jpg";
@@ -189,6 +190,7 @@ export const autoPics = [
     { name: "Paper", url: "#", icon: "ri:file-pdf-2-line" },
   ]}
 >
+  <Picture slot="background" src={bhg} alt="" priority />
 </Header>
 
 <HighlightedSection>
