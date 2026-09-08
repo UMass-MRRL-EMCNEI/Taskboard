@@ -1,8 +1,8 @@
 ---
-title: "Hospital Objects: An Object Library for Robotic Nursing Assistance"
+title: "Influence of Training Task Performance on Task Success for Hardware Benchmarking for Assisting Nurses with Sterile Procedures"
 theme: device
 favicon: favicon.svg
-description: A field study of the physical and packaging properties that make nursing supplies difficult for robots to perceive and manipulate.
+description: Benchmarking nurse-focused robot manipulation training tasks and small-parts manufacturing tasks with professional nurses using handheld data collection grippers.
 ---
 
 import Header from "./components/Header.astro";
@@ -13,11 +13,6 @@ import kit from "./assets/kit_square.png";
 import Gallery from "./components/Gallery.astro";
 import Carousel from "./components/Carousel.astro";
 import CarouselSlide from "./components/CarouselSlide.astro";
-import fmeasurement from "./assets/Figures/0751AE64.jpg";
-import fD9D2672B from "./assets/Figures/D9D2672B.jpg";
-import f5B33AAE5 from "./assets/Figures/5B33AAE5.jpg";
-import f452E544F from "./assets/Figures/452E544F.jpg";
-import fF7E4253A from "./assets/Figures/F7E4253A.jpg";
 import img0751AE64 from "./assets/Figures/0751AE64.jpg";
 import img077C7E2D from "./assets/Figures/077C7E2D.jpg";
 import img1046894C from "./assets/Figures/1046894C.jpg";
@@ -134,109 +129,94 @@ export const autoPics = [
 
 
 
+
 <Header
-  title="Identifying Challenges with Medical Supply Objects for Robotic Manipulation in Clinical Settings"
-  conference=" Submitted for ICRA 2027 "
+  title="Influence of Training Task Performance on Task Success for Hardware Benchmarking for Assisting Nurses with Sterile Procedures"
+  conference="Submitted for ICRA 2027"
   authors={[
-      {
-        name: "Seonhun Lee",
-        url: "https://seonhunlee.me",
-        institution: "University of Massachusetts Amherst",
-        notes: ["*"],
-      },
-      { name: "Gina L. Georgadarellis", institution: "University of Massachusetts Amherst", notes: ["*"] },
-      { name: "Cidalia J. Vital", institution: "Baystate Health", notes: ["†"] },
-      { name: "Frank C. Sup, IV", institution: "University of Massachusetts Amherst", notes: ["*"]  },
-    ]}
-    notes={[
-        { symbol: "*", text: "Department of Mechanical and Industrial Engineering, University of Massachusetts Amherst, Amherst, MA 01003 USA" },
-        { symbol: "†", text: "Baystate Health, Springfield, MA 01199 USA" },
-      ]}
-      links={[
-        { name: "Paper", url: "https://github.com/ho-onlee/Hospital-Objects-Oriented-for-Nurses-Library/tree/main/src", icon: "ri:file-pdf-2-line" },
-        { name: "Dataset", url: "https://github.com/ho-onlee/Hospital-Objects-Oriented-for-Nurses-Library/blob/37ab72c7e79f8992520b5996ce91e619b937a150/Dataset.xlsx", icon: "ri:download-2-line" },
- //       { name: "Code", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "ri:github-line" },
- //       { name: "arXiv", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "academicons:arxiv" },
-//        { name: "Slides", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "ri:slideshow-2-line" },
-      ]}
+    {
+      name: "Gina L. Georgadarellis",
+      institution: "University of Massachusetts Amherst",
+      notes: ["*"],
+    },
+    {
+      name: "Seonhun Lee",
+      institution: "University of Massachusetts Amherst",
+      notes: ["*"],
+    },
+    {
+      name: "Frank C. Sup, IV",
+      institution: "University of Massachusetts Amherst",
+      notes: ["*"],
+    },
+  ]}
+  notes={[
+    { symbol: "*", text: "Department of Mechanical and Industrial Engineering, University of Massachusetts Amherst, Amherst, MA 01003 USA" },
+  ]}
+  links={[
+    { name: "Paper", url: "#", icon: "ri:file-pdf-2-line" },
+  ]}
 >
-  <Picture slot="background" src={kit} alt="" priority />
 </Header>
 
 <HighlightedSection>
 
-## Abstract 
+## Abstract
 
-Robotic assistance in healthcare has advanced rapidly, yet the manipulation of medical supplies remains underexplored. Existing object libraries and manipulation benchmarks primarily focus on household items or surgical instruments, leaving the distinctive physical characteristics of clinical nursing supplies largely unrepresented. To address this gap, a case study was conducted in a Preoperative/Postanesthesia Care Unit supply closet to systematically document the materials, packaging architectures, and storage practices associated with commonly used nursing items. The analysis shows that medical supplies exhibit multilayer packaging, high deformability, transparency, and thin geometric features that introduce substantial challenges for robotic perception, grasping, and control. These objects were categorized, their packaging levels quantified, and their manipulation difficulties identified, revealing fundamental differences from rigid household objects typically used in robotics research. The findings motivate the creation of a dedicated medical‑supply object library and provide foundational insights for designing robotic systems that support nursing workflows.
+We designed nurse-focused robot manipulation training tasks tested by professional nurses as a resource for evaluating the capabilities and performance of robotic technology designed to assist nurses[cite: 1]. To compare performance on these nurse-focused training tasks with current robotic small-parts manufacturing benchmarks, we conducted a usability experiment[cite: 1]. Seven professional nurses completed two tasks and one workflow simulation using both their natural hands and robot data collection grippers[cite: 1]. The two tasks included (1) the custom nursing task set designed for sterile procedure preparation, focused on surface preparation, drape manipulation, and sterile field item addition subtasks, and (2) the National Institute of Standards and Technology (NIST) Robotic Grasping and Manipulation Competition Task Board focused on threading, insertions, belt drive assembly, and wire routing subtasks[cite: 1]. The simulated task served as a realistic version of the nursing task set that incorporates clinical workflow[cite: 1]. We examined whether subtask success observed during benchtop tasks corresponded to task success during the simulated nursing task[cite: 1]. All participants successfully completed all tasks when using their hands, establishing task feasibility[cite: 1]. In contrast, participants had substantial difficulty using robot grippers[cite: 1]. Threading operations on the NIST Task Board were universally unsuccessful, while the sterile drape placement task and the simulated nursing task were predominantly unsuccessful[cite: 1]. The results suggest that specific bench-top manipulations capture dexterity limitations that also impede performance in realistic nursing procedures[cite: 1]. These findings support developing nursing-focused robot benchmarking resources that help roboticists evaluate platform capabilities before conducting costly task-specific experiments[cite: 1].
 
 </HighlightedSection>
 
 ## Background
 
-### The Nursing Shortage and Robotic Solutions
-Rising healthcare demand and severe nursing shortages negatively impact job satisfaction, increase workloads, and compromise patient care quality. Collaborative nursing robots offer a promising way to enhance clinical workflows and health outcomes.
+### Motivation and Objectives
+Using a nurse-identified task of interest—setting up a sterile field to assist a nurse performing a sterile procedure—this study engaged registered nurses to perform tasks using their natural hands and handheld data collection grippers (modified Universal Manipulation Interface [UMI] grippers) representing an assistive autonomous robot[cite: 1]. The primary goal was creating nurse-focused manipulation training tasks to evaluate robotic capabilities in healthcare workflows, while secondarily comparing these against manufacturing assembly benchmarks (NIST RGMC Task Board)[cite: 1].
 
-### The Engineering-Nursing Knowledge Gap
-While robotic manipulation can significantly reduce clinical workloads, a major barrier exists due to the knowledge gap between engineers and healthcare professionals. Because nursing roles and tasks are diverse, patient-dependent, and constantly evolving, designing a robot that covers every aspect of nursing is exceptionally difficult.
-## Why clinical objects are different
-Robotics benchmarks are dominated by rigid household objects and surgical instruments. Nursing supply closets present a different manipulation regime: objects are often sterile-wrapped, transparent, thin, flexible, or nested inside several layers of packaging. A robot must recognize not only the item, but also the packaging state and the safe way to acquire it.
+### Study Conditions & Participants
+The within-subjects study evaluated 7 professional registered nurses ($47.3 \pm 13.6$ years old, $\ge 2$ years experience) across two actuator conditions[cite: 1]:
+- **Concentrated Load Grippers (C):** Modified handheld UMI grippers with angled, stiff fingers that concentrate contact force at fingertips, equipped with GoPro HERO13 Black cameras for IMU/video and Tobii Pro 3 eye-tracking glasses[cite: 1].
+- **Hands (H):** Natural hands wearing standard nitrile examination gloves where clinically appropriate[cite: 1].
 
-## Field study
+---
 
-We documented the contents and storage practices of a Preoperative/Postanesthesia Care Unit supply closet. The study records the materials, packaging architecture, and physical features of commonly used nursing items, then organizes those observations into object categories and manipulation challenges.
+## Experimental Setup & Tasks
 
-<Figure>
-  <Picture slot="figure" src={kit} alt="Ten labeled nursing supplies arranged on a clinical work surface" />
-  <Fragment slot="caption">A representative object kit from the study. The collection spans rigid containers, thin dressings, transparent packaging, tubing, adhesive materials, and small irregular components.</Fragment>
-</Figure>
-| Name | Secondary Packaging | Primary Packaging | Stacked$^1$ | Deformable$^1$ | Flat$^1$ | Transparent$^1$ | Label in Figure |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Emesis Bin | - | - | - - $\circ$ | - - - | - - - | - - - | (a) |
-| Medical Tape | - | - | - - - | - - - | - - - | - - - | (b) |
-| Standard Bore Extension Sets | Plastic bag | Peel pack | $\circ$ - - | - $\circ$ $\circ$ | - $\vartriangle$ $\vartriangle$ | - - $\vartriangle$ | (c) |
-| Pre-filled Saline Flush Syringes | Box | Plastic bag | - $\circ$ - | - - - | - - - | - $\circ$ $\vartriangle$ | (d) |
-| Shielded IV Catheter | - | Peel pack | - $\circ$ - | - - - | - - $\vartriangle$ | - - $\vartriangle$ | (e) |
-| Transparent Film Dressings | Box | Paper Packet | - $\circ$ - | - $\circ$ $\circ$ | - $\circ$ $\circ$ | - - - | (f) |
-| Transparent Film Dressing Frame Style | - | Paper Packet | - $\circ$ - | - $\circ$ $\circ$ | - $\circ$ $\circ$ | - - - | (g) |
-| Disposable Tourniquets | - | Box | - $\triangle$ - | - - $\circ$ | - - $\vartriangle$ | - - - | (h) |
-| Chlorhexidine Gluconate Applicator | - | Peel pack | - - - | - - - | - - - | - - - | (i) |
-| Alcohol Prep Pad | Box | Packet | - $\circ$ - | - $\circ$ $\circ$ | - $\circ$ $\circ$ | - - - | (j) |
+### 1. Nursing Simulation (Realistic Workflow)
+A low-fidelity clinical workflow simulation of intravenous (IV) dressing change preparation on a bedside table within a 3-minute limit[cite: 1]:
+- **Surface Preparation:** Dispensing and wiping down the table with Super Sani-Cloth germicidal wipes[cite: 1].
+- **Sterile Drape Setup:** Aseptic opening, grasping by the border, and unfolding of a sterile drape[cite: 1].
+- **Item Addition:** Picking and aseptic addition of 1 IV start kit, 3 Tegaderm dressings, and 3 gauze packages from a supply bin to the sterile field[cite: 1].
 
-- <small>$^1$ Attribute coded for each packaging layer and the object (left$\rightarrow$right): Secondary, Primary, Object. </small>
-- <small>$^1$ Note: $\circ$ (present), $-$ (absent), and $\triangle$ (intermediate or mixed).</small>
+### 2. Nurse Task Set (Bench-top Proxies)
+Isolated evaluations of sterile preparation using non-sterile generic proxies[cite: 1]:
+- **Surface Preparation:** Acrylic sheet covered in Glo Germ lotion divided into four segments[cite: 1].
+- **Drape Manipulation:** Unfolding packaged drape proxies made from McKesson CSR wrap and autoclave pouches[cite: 1].
+- **Item Addition:** Opening small proxy packages (cotton gauze in autoclave pouches)[cite: 1].
 
-## What the library makes visible
+### 3. NIST RGMC Manufacturing Task Board
+Evaluated across 4 quadrants with 3 minutes allotted per quadrant[cite: 1]:
+- **Quadrant 1 (Threading):** Threading bolts into an aluminum plate and nuts onto bolts[cite: 1].
+- **Quadrant 2 (Insertions):** Inserting shaped metal pegs, Ethernet cable snap-in, BNC connector twisting/locking, and gears[cite: 1].
+- **Quadrant 3 (Belt Drive Assembly):** Placing a rubber belt, sliding the tensioner disc, and tightening with a hex key[cite: 1].
+- **Quadrant 4 (Wire Routing):** Clicking wire ends into connectors and routing through retainers[cite: 1].
 
-The observations point to four recurring sources of difficulty:
-
-- **Layered packaging:** the useful object and the graspable surface are often different things.
-- **Dimensionality:** Flat objects, thin edges, small connectors, and narrow openings demand precise perception and control.
-- **Deformation:** wrappers, dressings, tape, and tubing change shape during pickup and placement.
-- **Transparency:** transparent surfaces and reflective packaging weaken standard visual cues.
-- **Multiple Object:** Objects that are normally stored stacked or inside a stack of boxes.
-
-These properties explain why performance on conventional object sets does not directly predict performance in nursing workflows. They also provide a concrete vocabulary for engineers and nurses to discuss what a robot must sense and manipulate.
-
-## From observations to robot benchmarks
-
-The proposed library is intended as a foundation for task-aware evaluation. Objects can be annotated by packaging level, material behavior, transparency, geometric delicacy, and the manipulation actions they invite. This shifts the benchmark question from “Can the robot grasp this shape?” to “Can the robot handle this clinical item in the state in which it is actually used?”
 
 
 <Carousel>
   <CarouselSlide>
-    <Picture src={fD9D2672B} alt="Top shelf of NurseMate - Emesis bins" />
+    <Picture src={img8B549576} alt="Top shelf of NurseMate - Emesis bins" />
   </CarouselSlide>
   <CarouselSlide>
-    <Picture src={f452E544F} alt="First drawer of NurseMate - Transparent Film Dressings, Disposable Tourniquets, Shielded IV Catheter, Standard Bore Extension Sets" />
+    <Picture src={img8B549576} alt="First drawer of NurseMate - Transparent Film Dressings, Disposable Tourniquets, Shielded IV Catheter, Standard Bore Extension Sets" />
   </CarouselSlide>
   <CarouselSlide>
-    <Picture src={f5B33AAE5} alt="Second drawer of NurseMate - Medical Tape, Alcohol Prep Pad" />
+    <Picture src={img8B549576} alt="Second drawer of NurseMate - Medical Tape, Alcohol Prep Pad" />
   </CarouselSlide>
   <CarouselSlide>
-    <Picture src={fF7E4253A} alt="Fourth drawer of NurseMate - Pre-filled Saline Flush Syringes" />
+    <Picture src={img8B549576} alt="Fourth drawer of NurseMate - Pre-filled Saline Flush Syringes" />
   </CarouselSlide>
   <CarouselSlide>
-    <Picture src={fmeasurement} alt="Photo data examples of Hospital Objects Oriented for Nursing" />
+    <Picture src={img8B549576} alt="Photo data examples of Hospital Objects Oriented for Nursing" />
   </CarouselSlide>
 </Carousel>
 
@@ -246,7 +226,66 @@ The proposed library is intended as a foundation for task-aware evaluation. Obje
 <Gallery images={autoPics} rows={3} gap="0.5rem" />
 <small>The dataset is collected using a Galaxy S25 Ultra Camera at 200 MP. Camera intrinsics can be calculated from the code `camera_intrinsic.py` using calibration_images.  </small>
 
-## Outlook
+---
 
-The next step is to connect the object descriptions to nursing tasks such as retrieving, opening, sorting, and handing over supplies. A useful extension would be an interactive object browser with filters for deformability, transparency, packaging layers, and failure modes, alongside short manipulation clips and downloadable annotations. A second valuable figure would be a task-to-object matrix showing which object properties create difficulty at each stage of a nursing workflow.
+## Performance Comparison
+
+| Evaluation Metric / Subtask | Hands (H) Completion | Gripper (C) Completion | Key Observations with Gripper |
+| :--- | :---: | :---: | :--- |
+| **NIST Quadrant 1: Threading** | 100% ($9/9$ nuts & bolts)[cite: 1] | **0.0%** ($3.71$ nuts, $2.43$ bolts avg)[cite: 1] | Universal failure due to tight finger clearance and rotation demands[cite: 1]. |
+| **NIST Quadrant 2: Insertions** | 100%[cite: 1] | **100%**[cite: 1] | Insertion alignment and push actions succeeded[cite: 1]. |
+| **NIST Quadrant 3: Belt Drive** | 100%[cite: 1] | **85.7%**[cite: 1] | Tensioning and hex key tightening proved mostly feasible[cite: 1]. |
+| **NIST Quadrant 4: Wire Routing** | 100%[cite: 1] | **100%**[cite: 1] | Compliant wire placement succeeded[cite: 1]. |
+| **Nursing Task: Surface Wiping** | 100% (85.7% clean)[cite: 1] | **100%** (42.9% clean)[cite: 1] | 57.1% failed UV-germ sanitization check due to uneven contact force[cite: 1]. |
+| **Nursing Task: Drape Setup** | 100%[cite: 1] | **42.9%**[cite: 1] | High failure rate unfolding multi-fold compliant sheets[cite: 1]. |
+| **Nursing Task: Item Addition** | 100%[cite: 1] | **71.4%**[cite: 1] | Moderate success opening peel pouches without contamination[cite: 1]. |
+| **Nursing Simulation (Full Workflow)** | **100%**[cite: 1] | **14.3%**[cite: 1] | 100% wiped surface, 42.9% placed drape, only 14.3% added $\ge 1$ item, 0% finished all items[cite: 1]. |
+
+---
+
+## Participant Evaluation & Perceived Similarity
+
+Likert survey results (5-point scale: 1 = Not at all, 5 = Extremely well / Very large extent)[cite: 1]:
+
+| Survey Question | Mean (SD) | Median | Mode |
+| :--- | :---: | :---: | :---: |
+| **1a. Clinical Similarity: NIST Task Board** | 2.14 (1.3)[cite: 1] | 2[cite: 1] | 1[cite: 1] |
+| **1b. Clinical Similarity: Nursing Task Set** | 4.71 (0.5)[cite: 1] | 5[cite: 1] | 5[cite: 1] |
+| **1c. Clinical Similarity: Nursing Simulation** | 4.71 (0.5)[cite: 1] | 5[cite: 1] | 5[cite: 1] |
+| **2. NIST captures nursing manipulation skills** | 2.71 (1.3)[cite: 1] | 3[cite: 1] | 3[cite: 1] |
+| **3. Nursing Task Set reveals unique limitations** | 3.71 (1.3)[cite: 1] | 4[cite: 1] | 4[cite: 1] |
+
+Friedman testing showed a significant difference across task similarity ratings ($\chi^2 = 10.8$, $p = 0.0045$)[cite: 1]. Post-hoc Wilcoxon signed-rank tests confirmed that NIST differed significantly from both the Nursing Task Set ($p = 0.0310$) and Nursing Simulation ($p = 0.0345$), whereas the Nursing Task Set matched the realistic simulation in clinical fidelity ($p = 1.0$)[cite: 1].
+
+---
+
+## Key Takeaways
+
+- **Hardware Remains the Primary Bottleneck:** Despite recent advances in robot learning pipelines, end-effector kinematics and contact mechanics prevent execution of compliant clinical workflows[cite: 1].
+- **Drape Manipulation is Highly Challenging:** Manipulating and unfolding thin, deformable sheets consumed the largest amount of time and produced the most timeouts[cite: 1].
+- **Design Improvements Suggested by Nurses:** Participants indicated the need for compact gripper dimensions to operate inside cluttered spaces, as well as wider maximum aperture spans to grasp wider supplies like wipe canisters[cite: 1].
+
+<Figure>
+  <Picture slot="figure" src={figTimelines} alt="Task Timelines per Participant and Condition" />
+  <Fragment slot="caption">Timeline distributions per participant across subtasks (Wipe Prep, Wipe, Drape, Item Addition) illustrating timeouts and execution bottlenecks in the gripper condition[cite: 1].</Fragment>
+</Figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
